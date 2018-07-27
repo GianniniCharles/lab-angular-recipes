@@ -5,16 +5,22 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import {InAndOutDishesService} from './services/in-and-out-dishes.service'
+import { RecipesComponent } from './recipes/recipes.component';
+
 @NgModule({
   declarations: [
     AppComponent,
+    RecipesComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    InAndOutDishesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
